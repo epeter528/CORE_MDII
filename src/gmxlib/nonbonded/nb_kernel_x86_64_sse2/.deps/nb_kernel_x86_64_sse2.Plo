@@ -1,0 +1,444 @@
+nb_kernel_x86_64_sse2.lo: nb_kernel_x86_64_sse2.c \
+ /usr/include/stdc-predef.h ../../../../src/config.h \
+ ../../../../include/types/simple.h \
+ /trinity/shared/apps/tr17.10/x86_64/gcc-7.2.0/lib/gcc/x86_64-redhat-linux/7.2.0/include-fixed/limits.h \
+ /trinity/shared/apps/tr17.10/x86_64/gcc-7.2.0/lib/gcc/x86_64-redhat-linux/7.2.0/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../../../../include/types/nrnb.h \
+ nb_kernel_x86_64_sse2.h /usr/include/stdio.h \
+ /trinity/shared/apps/tr17.10/x86_64/gcc-7.2.0/lib/gcc/x86_64-redhat-linux/7.2.0/include/stddef.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /trinity/shared/apps/tr17.10/x86_64/gcc-7.2.0/lib/gcc/x86_64-redhat-linux/7.2.0/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h ../nb_kerneltype.h \
+ nb_kernel_allvsall_sse2_double.h ../../../../include/typedefs.h \
+ /usr/include/sys/types.h /usr/include/time.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/byteswap-16.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/sigset.h \
+ /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h ../../../../include/sysstuff.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-float.h /usr/include/errno.h \
+ /usr/include/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
+ /usr/include/asm-generic/errno-base.h /usr/include/signal.h \
+ /usr/include/bits/signum.h /usr/include/bits/siginfo.h \
+ /usr/include/bits/sigaction.h /usr/include/bits/sigcontext.h \
+ /usr/include/bits/sigstack.h /usr/include/sys/ucontext.h \
+ /usr/include/bits/sigthread.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h \
+ /usr/include/xlocale.h ../../../../include/types/simple.h \
+ ../../../../include/types/enums.h ../../../../include/types/block.h \
+ ../../../../include/types/idef.h ../../../../include/types/simple.h \
+ ../../../../include/types/symtab.h ../../../../include/types/idef.h \
+ ../../../../include/types/atoms.h ../../../../include/types/trx.h \
+ ../../../../include/types/atoms.h \
+ ../../../../include/types/../molfile_plugin.h \
+ ../../../../include/types/../vmdplugin.h \
+ ../../../../include/types/../vmdio.h \
+ ../../../../include/types/../molfile_plugin.h \
+ ../../../../include/types/../types/simple.h \
+ ../../../../include/types/topology.h ../../../../include/types/block.h \
+ ../../../../include/types/symtab.h ../../../../include/types/energy.h \
+ ../../../../include/types/inputrec.h \
+ ../../../../include/types/../sysstuff.h \
+ ../../../../include/types/ishift.h ../../../../include/types/graph.h \
+ ../../../../include/types/nrnb.h ../../../../include/types/nblist.h \
+ ../../../../include/types/nsgrid.h ../../../../include/types/commrec.h \
+ /trinity/shared/apps/tr17.10/x86_64/openmpi-gdr13-cuda101-gcc-ucx170/include/mpi.h \
+ /trinity/shared/apps/tr17.10/x86_64/openmpi-gdr13-cuda101-gcc-ucx170/include/mpi_portable_platform.h \
+ ../../../../include/types/forcerec.h ../../../../include/types/ns.h \
+ ../../../../include/types/nsgrid.h ../../../../include/types/nblist.h \
+ ../../../../include/types/genborn.h ../../../../include/types/qmmmrec.h \
+ ../../../../include/types/fcdata.h ../../../../include/types/commrec.h \
+ ../../../../include/types/mdatom.h ../../../../include/types/pbc.h \
+ ../../../../include/types/ifunc.h \
+ ../../../../include/types/../typedefs.h \
+ ../../../../include/types/filenm.h ../../../../include/types/group.h \
+ ../../../../include/types/state.h ../../../../include/types/shellfc.h \
+ ../../../../include/types/constr.h ../../../../include/types/matrix.h \
+ ../../../../include/types/oenv.h ../../../../include/types/globsig.h \
+ ../../../../include/types/nlistheuristics.h \
+ ../../../../include/types/iteratedconstraints.h \
+ nb_kernel_allvsallgb_sse2_double.h nb_kernel010_x86_64_sse2.h \
+ nb_kernel030_x86_64_sse2.h nb_kernel100_x86_64_sse2.h \
+ nb_kernel101_x86_64_sse2.h nb_kernel102_x86_64_sse2.h \
+ nb_kernel103_x86_64_sse2.h nb_kernel104_x86_64_sse2.h \
+ nb_kernel110_x86_64_sse2.h nb_kernel111_x86_64_sse2.h \
+ nb_kernel112_x86_64_sse2.h nb_kernel113_x86_64_sse2.h \
+ nb_kernel114_x86_64_sse2.h nb_kernel130_x86_64_sse2.h \
+ nb_kernel131_x86_64_sse2.h nb_kernel132_x86_64_sse2.h \
+ nb_kernel133_x86_64_sse2.h nb_kernel134_x86_64_sse2.h \
+ nb_kernel200_x86_64_sse2.h nb_kernel201_x86_64_sse2.h \
+ nb_kernel202_x86_64_sse2.h nb_kernel203_x86_64_sse2.h \
+ nb_kernel204_x86_64_sse2.h nb_kernel210_x86_64_sse2.h \
+ nb_kernel211_x86_64_sse2.h nb_kernel212_x86_64_sse2.h \
+ nb_kernel213_x86_64_sse2.h nb_kernel214_x86_64_sse2.h \
+ nb_kernel230_x86_64_sse2.h nb_kernel231_x86_64_sse2.h \
+ nb_kernel232_x86_64_sse2.h nb_kernel233_x86_64_sse2.h \
+ nb_kernel234_x86_64_sse2.h nb_kernel300_x86_64_sse2.h \
+ nb_kernel301_x86_64_sse2.h nb_kernel302_x86_64_sse2.h \
+ nb_kernel303_x86_64_sse2.h nb_kernel304_x86_64_sse2.h \
+ nb_kernel310_x86_64_sse2.h nb_kernel311_x86_64_sse2.h \
+ nb_kernel312_x86_64_sse2.h nb_kernel313_x86_64_sse2.h \
+ nb_kernel314_x86_64_sse2.h nb_kernel330_x86_64_sse2.h \
+ nb_kernel331_x86_64_sse2.h nb_kernel332_x86_64_sse2.h \
+ nb_kernel333_x86_64_sse2.h nb_kernel334_x86_64_sse2.h \
+ nb_kernel400_x86_64_sse2.h nb_kernel410_x86_64_sse2.h \
+ nb_kernel430_x86_64_sse2.h /usr/include/setjmp.h \
+ /usr/include/bits/setjmp.h nb_kernel_x86_64_sse2_test_asm.h
+
+/usr/include/stdc-predef.h:
+
+../../../../src/config.h:
+
+../../../../include/types/simple.h:
+
+/trinity/shared/apps/tr17.10/x86_64/gcc-7.2.0/lib/gcc/x86_64-redhat-linux/7.2.0/include-fixed/limits.h:
+
+/trinity/shared/apps/tr17.10/x86_64/gcc-7.2.0/lib/gcc/x86_64-redhat-linux/7.2.0/include-fixed/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/usr/include/bits/posix1_lim.h:
+
+/usr/include/bits/local_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/bits/posix2_lim.h:
+
+../../../../include/types/nrnb.h:
+
+nb_kernel_x86_64_sse2.h:
+
+/usr/include/stdio.h:
+
+/trinity/shared/apps/tr17.10/x86_64/gcc-7.2.0/lib/gcc/x86_64-redhat-linux/7.2.0/include/stddef.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/trinity/shared/apps/tr17.10/x86_64/gcc-7.2.0/lib/gcc/x86_64-redhat-linux/7.2.0/include/stdarg.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
+
+../nb_kerneltype.h:
+
+nb_kernel_allvsall_sse2_double.h:
+
+../../../../include/typedefs.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/time.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/bits/byteswap.h:
+
+/usr/include/bits/byteswap-16.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+../../../../include/sysstuff.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/bits/waitstatus.h:
+
+/usr/include/alloca.h:
+
+/usr/include/bits/stdlib-float.h:
+
+/usr/include/errno.h:
+
+/usr/include/bits/errno.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/asm/errno.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/signal.h:
+
+/usr/include/bits/signum.h:
+
+/usr/include/bits/siginfo.h:
+
+/usr/include/bits/sigaction.h:
+
+/usr/include/bits/sigcontext.h:
+
+/usr/include/bits/sigstack.h:
+
+/usr/include/sys/ucontext.h:
+
+/usr/include/bits/sigthread.h:
+
+/usr/include/unistd.h:
+
+/usr/include/bits/posix_opt.h:
+
+/usr/include/bits/environments.h:
+
+/usr/include/bits/confname.h:
+
+/usr/include/getopt.h:
+
+/usr/include/xlocale.h:
+
+../../../../include/types/simple.h:
+
+../../../../include/types/enums.h:
+
+../../../../include/types/block.h:
+
+../../../../include/types/idef.h:
+
+../../../../include/types/simple.h:
+
+../../../../include/types/symtab.h:
+
+../../../../include/types/idef.h:
+
+../../../../include/types/atoms.h:
+
+../../../../include/types/trx.h:
+
+../../../../include/types/atoms.h:
+
+../../../../include/types/../molfile_plugin.h:
+
+../../../../include/types/../vmdplugin.h:
+
+../../../../include/types/../vmdio.h:
+
+../../../../include/types/../molfile_plugin.h:
+
+../../../../include/types/../types/simple.h:
+
+../../../../include/types/topology.h:
+
+../../../../include/types/block.h:
+
+../../../../include/types/symtab.h:
+
+../../../../include/types/energy.h:
+
+../../../../include/types/inputrec.h:
+
+../../../../include/types/../sysstuff.h:
+
+../../../../include/types/ishift.h:
+
+../../../../include/types/graph.h:
+
+../../../../include/types/nrnb.h:
+
+../../../../include/types/nblist.h:
+
+../../../../include/types/nsgrid.h:
+
+../../../../include/types/commrec.h:
+
+/trinity/shared/apps/tr17.10/x86_64/openmpi-gdr13-cuda101-gcc-ucx170/include/mpi.h:
+
+/trinity/shared/apps/tr17.10/x86_64/openmpi-gdr13-cuda101-gcc-ucx170/include/mpi_portable_platform.h:
+
+../../../../include/types/forcerec.h:
+
+../../../../include/types/ns.h:
+
+../../../../include/types/nsgrid.h:
+
+../../../../include/types/nblist.h:
+
+../../../../include/types/genborn.h:
+
+../../../../include/types/qmmmrec.h:
+
+../../../../include/types/fcdata.h:
+
+../../../../include/types/commrec.h:
+
+../../../../include/types/mdatom.h:
+
+../../../../include/types/pbc.h:
+
+../../../../include/types/ifunc.h:
+
+../../../../include/types/../typedefs.h:
+
+../../../../include/types/filenm.h:
+
+../../../../include/types/group.h:
+
+../../../../include/types/state.h:
+
+../../../../include/types/shellfc.h:
+
+../../../../include/types/constr.h:
+
+../../../../include/types/matrix.h:
+
+../../../../include/types/oenv.h:
+
+../../../../include/types/globsig.h:
+
+../../../../include/types/nlistheuristics.h:
+
+../../../../include/types/iteratedconstraints.h:
+
+nb_kernel_allvsallgb_sse2_double.h:
+
+nb_kernel010_x86_64_sse2.h:
+
+nb_kernel030_x86_64_sse2.h:
+
+nb_kernel100_x86_64_sse2.h:
+
+nb_kernel101_x86_64_sse2.h:
+
+nb_kernel102_x86_64_sse2.h:
+
+nb_kernel103_x86_64_sse2.h:
+
+nb_kernel104_x86_64_sse2.h:
+
+nb_kernel110_x86_64_sse2.h:
+
+nb_kernel111_x86_64_sse2.h:
+
+nb_kernel112_x86_64_sse2.h:
+
+nb_kernel113_x86_64_sse2.h:
+
+nb_kernel114_x86_64_sse2.h:
+
+nb_kernel130_x86_64_sse2.h:
+
+nb_kernel131_x86_64_sse2.h:
+
+nb_kernel132_x86_64_sse2.h:
+
+nb_kernel133_x86_64_sse2.h:
+
+nb_kernel134_x86_64_sse2.h:
+
+nb_kernel200_x86_64_sse2.h:
+
+nb_kernel201_x86_64_sse2.h:
+
+nb_kernel202_x86_64_sse2.h:
+
+nb_kernel203_x86_64_sse2.h:
+
+nb_kernel204_x86_64_sse2.h:
+
+nb_kernel210_x86_64_sse2.h:
+
+nb_kernel211_x86_64_sse2.h:
+
+nb_kernel212_x86_64_sse2.h:
+
+nb_kernel213_x86_64_sse2.h:
+
+nb_kernel214_x86_64_sse2.h:
+
+nb_kernel230_x86_64_sse2.h:
+
+nb_kernel231_x86_64_sse2.h:
+
+nb_kernel232_x86_64_sse2.h:
+
+nb_kernel233_x86_64_sse2.h:
+
+nb_kernel234_x86_64_sse2.h:
+
+nb_kernel300_x86_64_sse2.h:
+
+nb_kernel301_x86_64_sse2.h:
+
+nb_kernel302_x86_64_sse2.h:
+
+nb_kernel303_x86_64_sse2.h:
+
+nb_kernel304_x86_64_sse2.h:
+
+nb_kernel310_x86_64_sse2.h:
+
+nb_kernel311_x86_64_sse2.h:
+
+nb_kernel312_x86_64_sse2.h:
+
+nb_kernel313_x86_64_sse2.h:
+
+nb_kernel314_x86_64_sse2.h:
+
+nb_kernel330_x86_64_sse2.h:
+
+nb_kernel331_x86_64_sse2.h:
+
+nb_kernel332_x86_64_sse2.h:
+
+nb_kernel333_x86_64_sse2.h:
+
+nb_kernel334_x86_64_sse2.h:
+
+nb_kernel400_x86_64_sse2.h:
+
+nb_kernel410_x86_64_sse2.h:
+
+nb_kernel430_x86_64_sse2.h:
+
+/usr/include/setjmp.h:
+
+/usr/include/bits/setjmp.h:
+
+nb_kernel_x86_64_sse2_test_asm.h:

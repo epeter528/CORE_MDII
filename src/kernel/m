@@ -1,0 +1,20 @@
+./genhydro.c:/* 	      newpdba->atom[newi].m    = ab[i][j].atom->m; */
+./genhydro.c:/* 	      newpdba->atom[newi].q    = ab[i][j].atom->q; */
+./genhydro.c:/* 	      newpdba->atom[newi].type = ab[i][j].atom->type; */
+./gmxcheck.c:    if (atom->ptype == eptVSite)
+./grompp.c:    if (atom->ptype == eptShell ||
+./grompp.c:	atom->ptype == eptBond  ||
+./grompp.c:	atom->ptype == eptVSite) {
+./grompp.c:      mass[i] = atom->m;
+./pdb2gmx.c:  pdb_ch[nch-1].natom=natom-pdb_ch[nch-1].start;
+./pdb2gmx.c:	 pdba_all.resinfo[pdba_all.atom[natom-1].resind].nr,natom);
+./pdb2top.c:    for(k=restp->natom-1; k > at_start+hack->nr; k--)
+./pdb2top.c:                            (*restp)[i].natom--;
+./readir.c:    if (atom->ptype == eptAtom || atom->ptype == eptNucleus) {
+./readir.c:    if (atom->q != 0 || atom->qB != 0) {
+./readir.c:      mgrp[ggrpnr(&sys->groups,egcACC,i)] += atom->m;
+./toppush.c:  atom->q = q;
+./toppush.c:  atom->m = m;
+./toppush.c:  atom->ptype = pt;
+./vsite_parm.c:    name = get_atomtype_name(atom->type,atype);
+./vsite_parm.c:        name = get_atomtype_name(atom->typeB,atype);
