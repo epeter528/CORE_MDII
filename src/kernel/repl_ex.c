@@ -199,7 +199,7 @@ gmx_repl_ex_t init_replica_exchange(FILE *fplog,
             gmx_fatal(FARGS,"delta_lambda is not zero");
         }
         break;
-    } 
+    }
 
     if (re->bNPT)
     {
@@ -247,7 +247,7 @@ gmx_repl_ex_t init_replica_exchange(FILE *fplog,
                 gmx_fatal(FARGS,"Two replicas have identical %ss",erename[re->type]);
             }
         }
-    }  
+    }
     fprintf(fplog,"Repl   ");
     for(i=0; i<re->nrepl; i++)
     {
@@ -287,7 +287,7 @@ gmx_repl_ex_t init_replica_exchange(FILE *fplog,
                 gmx_fatal(FARGS,"The reference pressure decreases with increasing temperature");
             }
         }
-    }  
+    }
     fprintf(fplog,"\nRepl  ");
   
     re->nst = nst;
@@ -535,7 +535,7 @@ static void print_ind(FILE *fplog,const char *leg,int n,int *ind,gmx_bool *bEx)
     {
         fprintf(fplog," %c %2d",(bEx!=0 && bEx[i]) ? 'x' : ' ',ind[i]);
     }
-//    fprintf(fplog,"\n");
+    fprintf(fplog,"\n");
 }
 
 static void print_prob(FILE *fplog,const char *leg,int n,real *prob)
@@ -553,10 +553,10 @@ static void print_prob(FILE *fplog,const char *leg,int n,real *prob)
         }
         else
         {
-//            fprintf(fplog,"     ");
+            fprintf(fplog,"     ");
         }
     }
-//    fprintf(fplog,"\n");
+    fprintf(fplog,"\n");
 }
 
 static void print_count(FILE *fplog,const char *leg,int n,int *count)
@@ -566,30 +566,29 @@ static void print_count(FILE *fplog,const char *leg,int n,int *count)
     fprintf(fplog,"Repl %2s ",leg);
     for(i=1; i<n; i++)
     {
-//        fprintf(fplog," %4d",count[i]);
+        fprintf(fplog," %4d",count[i]);
     }
-//    fprintf(fplog,"\n");
+    fprintf(fplog,"\n");
 }
 
 static int get_replica_exchange(FILE *fplog,const gmx_multisim_t *ms,
-                                struct gmx_repl_ex *re,double l_max_tt,int recurrence_time,real *ener,real vol,
+                                struct gmx_repl_ex *re,real *ener,real vol,
                                 int step,real time)
 {
     int  m,i,a,b;
     real *Epot=NULL,*Vol=NULL,*dvdl=NULL,*prob;
     real ediff=0,delta=0,dpV=0,betaA=0,betaB=0;
     gmx_bool *bEx,bPrint;
-    int  exchange; 
-    
- //   fprintf(fplog,"Replica exchange at step %d time %g\n",step,time);
+    int  exchange;
+
+    fprintf(fplog,"Replica exchange at step %d time %g\n",step,time);
   
     switch (re->type)
     {
     case ereTEMP:
         snew(Epot,re->nrepl);
         snew(Vol,re->nrepl);
-     //   Epot[re->repl] = ener[F_EPOT];
-	Epot[re->repl] = l_max_tt;
+        Epot[re->repl] = ener[F_EPOT];
         Vol[re->repl]  = vol;
         gmx_sum_sim(re->nrepl,Epot,ms);
         gmx_sum_sim(re->nrepl,Vol,ms);
@@ -619,14 +618,10 @@ static int get_replica_exchange(FILE *fplog,const gmx_multisim_t *ms,
                 /* Use equations from:
                  * Okabe et. al. Chem. Phys. Lett. 335 (2001) 435-439
                  */
-		
-		ediff = 101.0;
-                if(Epot[a] != 0.0 && Epot[b] != 0.0) ediff = Epot[b]/Epot[a];
-              //  betaA = 1.0/(re->q[a]*BOLTZ);
-              //  betaB = 1.0/(re->q[b]*BOLTZ);
-              //  delta = (betaA - betaB)*ediff;
-		  delta = ediff;
-		
+                ediff = Epot[b] - Epot[a];
+                betaA = 1.0/(re->q[a]*BOLTZ);
+                betaB = 1.0/(re->q[b]*BOLTZ);
+                delta = (betaA - betaB)*ediff;
                 break;
             case ereLAMBDA:
                 /* Here we exchange based on a linear extrapolation of dV/dlambda.
@@ -641,20 +636,20 @@ static int get_replica_exchange(FILE *fplog,const gmx_multisim_t *ms,
             }
             if (bPrint)
             {
-    //            fprintf(fplog,"Repl %d <-> %d  dE = %10.3e",a,b,delta);
+                fprintf(fplog,"Repl %d <-> %d  dE = %10.3e",a,b,delta);
             }
             if (re->bNPT)
             {
                 dpV = (betaA*re->pres[a]-betaB*re->pres[b])*(Vol[b]-Vol[a])/PRESFAC;
                 if (bPrint)
                 {
-     //               fprintf(fplog,"  dpV = %10.3e  d = %10.3e",dpV,delta + dpV);
+                    fprintf(fplog,"  dpV = %10.3e  d = %10.3e",dpV,delta + dpV);
                 }
-            //    delta += dpV;
+                delta += dpV;
             }
             if (bPrint)
             {
-    //            fprintf(fplog,"\n");
+                fprintf(fplog,"\n");
             }
             if (delta <= 0)
             {
@@ -669,8 +664,7 @@ static int get_replica_exchange(FILE *fplog,const gmx_multisim_t *ms,
                 }
                 else
                 {
-		      prob[i] = delta;
-                  //  prob[i] = exp(-delta);
+                    prob[i] = exp(-delta);
                 }
                 bEx[i] = (rando(&(re->seed)) < prob[i]);
             }
@@ -694,16 +688,16 @@ static int get_replica_exchange(FILE *fplog,const gmx_multisim_t *ms,
             bEx[i] = FALSE;
         }
     }
- //   print_ind(fplog,"ex",re->nrepl,re->ind,bEx);
- //   print_prob(fplog,"pr",re->nrepl,prob);
- //   fprintf(fplog,"\n");
-    
+    print_ind(fplog,"ex",re->nrepl,re->ind,bEx);
+    print_prob(fplog,"pr",re->nrepl,prob);
+    fprintf(fplog,"\n");
+
     sfree(bEx);
     sfree(prob);
     sfree(Epot);
     sfree(Vol);
     sfree(dvdl);
-    
+  
     re->nattempt[m]++;
 
     return exchange;
@@ -722,7 +716,7 @@ static void write_debug_x(t_state *state)
     }
 }
 
-gmx_bool replica_exchange(FILE *fplog,const t_commrec *cr,struct gmx_repl_ex *re,double l_max_tt,int recurrence_time,
+gmx_bool replica_exchange(FILE *fplog,const t_commrec *cr,struct gmx_repl_ex *re,
                           t_state *state,real *ener,
                           t_state *state_local,
                           int step,real time)
@@ -735,7 +729,7 @@ gmx_bool replica_exchange(FILE *fplog,const t_commrec *cr,struct gmx_repl_ex *re
   
     if (MASTER(cr))
     {
-        exchange = get_replica_exchange(fplog,ms,re,l_max_tt,recurrence_time,ener,det(state->box),
+        exchange = get_replica_exchange(fplog,ms,re,ener,det(state->box),
                                         step,time);
         bExchanged = (exchange >= 0);
     }

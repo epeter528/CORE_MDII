@@ -2661,7 +2661,7 @@ time_last = stepper;
 	    bNS      = TRUE;
 	    if(ir->implicit_solvent) bBornRadii = TRUE;
 	  
-            bExchanged = replica_exchange(fplog,cr,repl_ex,l_max_tt2,recurrence_time,
+            bExchanged = replica_exchange(fplog,cr,repl_ex,
                                           state_global,enerd->term,
                                           state,step,t);
 
